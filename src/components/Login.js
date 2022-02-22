@@ -1,4 +1,6 @@
 import React from 'react'
+import firebase from "firebase/app"
+import { auth } from "../firebase"
 
 //svg
 import google from "../assets/google.svg"
@@ -11,7 +13,9 @@ const Login = () => {
     <div className={styles.loginPage}>
         <div className={styles.loginCard}>
             <h2> Wellcome to Amingram</h2>
-            <div className={styles.button}>
+            <div
+            onClick={() =>auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())}
+            className={styles.button}>
                 <img src={google} alt="google" /> Sign in With Google
             </div>
         </div>
