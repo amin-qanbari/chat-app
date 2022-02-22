@@ -1,9 +1,14 @@
 import './App.css';
 
+//SPA
+import { Routes , Route } from 'react-router-dom';
+
 function App() {
   return (
     <div className="App">
-     
+      <Routes>
+
+      </Routes>
     </div>
   );
 }
