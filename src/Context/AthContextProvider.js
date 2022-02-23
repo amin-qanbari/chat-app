@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {auth} from '../firebase'
 
-const AuthContext = createContext()
+export const AuthContext = createContext()
 
 const AthContextProvider = ({children}) => {
     const [loading , setLoading] = useState(true)
